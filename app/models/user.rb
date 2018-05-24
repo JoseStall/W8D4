@@ -1,0 +1,4 @@
+class User < ApplicationRecord
+	geocoded_by :adress
+	after_validation :geocode
+end
