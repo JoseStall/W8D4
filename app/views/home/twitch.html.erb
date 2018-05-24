@@ -1,0 +1,19 @@
+
+  <body>
+    <div id="twitch-embed"></div>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      var embed = new Twitch.Embed("twitch-embed", {
+        width: 1000,
+        height: 550,
+        channel: "originhs",
+        layout: "video",
+        autoplay: false
+      });
+      embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        var player = embed.getPlayer();
+        player.play();
+      });
+    </script>
+  </body>
+
